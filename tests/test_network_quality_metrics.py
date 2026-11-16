@@ -63,6 +63,6 @@ def test_unreachable_network_returns_null_metrics(client, monkeypatch):
 
     response = client.get("/api/network-quality")
 
-    assert response.status_code == 200
+    assert response.status_code == 200, response.text
     assert response.json()["ping_ms"] is None
     assert response.json()["jitter_ms"] is None
