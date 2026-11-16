@@ -919,7 +919,7 @@ def network_quality():
 
 
 
-        jitter = 0.0
+        jitter = None
 
 
 
@@ -1027,13 +1027,7 @@ def network_quality():
 
 
 
-        "jitter_ms": round(
-
-            jitter,
-
-            2
-
-        ),
+        "jitter_ms": round(jitter, 2) if jitter is not None else None,
 
 
 
